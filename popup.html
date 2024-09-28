@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lecture Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <button id="speech-nav" class="active">Speech to Summarize</button>
+        <button id="text-nav">Text to Summarize</button>
+    </div>
+    <div id="speech-section">
+        <h2>Speech to Summarize</h2>
+        <button id="start-recording">Start Recording</button>
+        <div id="transcript" class="hidden fade-in"></div> <!-- Add fade-in class -->
+        <button id="summarize" disabled>Summarize Speech</button>
+        <div id="speech-status-message" class="fade-in"></div> <!-- Add fade-in class -->
+        <div id="speech-summary" class="hidden fade-in"></div> <!-- Add fade-in class -->
+        <div id="speech-notes" class="hidden fade-in"></div> <!-- Add fade-in class -->
+    </div>
+    
+    
+    <div id="text-section" class="hidden">
+        <h2>Text to Summarize</h2>
+        <textarea id="text-input" placeholder="Type or paste text here..."></textarea>
+        <button id="submit-text">Submit Text</button>
+        <div id="text-status-message"></div>
+        <div id="text-summary" class="hidden"></div>
+        <div id="text-notes" class="hidden"></div> <!-- New section for text notes -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

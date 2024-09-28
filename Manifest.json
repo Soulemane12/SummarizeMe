@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "AI Lecture Summarizer",
+    "version": "1.0",
+    "description": "Summarize lectures via text input or speech recognition.",
+    "permissions": ["activeTab", "microphone"],
+    "action": {
+      "default_popup": "popup.html"
+      
+    }
+  }
+  
