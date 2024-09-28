@@ -18,9 +18,13 @@ const textNavButton = document.getElementById("text-nav");
 const speechSection = document.getElementById("speech-section");
 const textSection = document.getElementById("text-section");
 
+// Theme toggle button
+const themeToggleButton = document.getElementById("theme-toggle");
+
 // Navbar navigation functionality
 speechNavButton.addEventListener("click", switchToSpeechMode);
 textNavButton.addEventListener("click", switchToTextMode);
+themeToggleButton.addEventListener("click", toggleTheme);
 
 function switchToSpeechMode() {
     speechSection.classList.remove("hidden");
@@ -107,6 +111,7 @@ summarizeButton.addEventListener("click", async () => {
         speechNotesDiv.innerHTML = generateNotes(summary); // Generate notes from summary
         speechNotesDiv.classList.remove("hidden");
         speechStatusMessage.textContent = "Summarization complete.";
+        highlightImportantInfo(summary); // Highlight key points
     } else {
         speechStatusMessage.textContent = "No speech recorded to summarize.";
     }
@@ -123,6 +128,7 @@ submitTextButton.addEventListener("click", async () => {
         textNotesDiv.innerHTML = generateNotes(summary); // Generate notes from summary
         textNotesDiv.classList.remove("hidden");
         textStatusMessage.textContent = "Summarization complete.";
+        highlightImportantInfo(summary); // Highlight key points
     } else {
         textStatusMessage.textContent = "Please enter text to summarize.";
     }
@@ -161,4 +167,19 @@ function generateNotes(summary) {
         return '';
     }).join('');
     return `<ul>${notesHTML}</ul>`; // Wrap in unordered list
+}
+
+// Highlight important information
+function highlightImportantInfo(summary) {
+    const highlightedInfo = summary.split('.').map(sentence => {
+        const trimmedSentence = sentence.trim();
+        return `<span class="highlight">${trimmedSentence}</span>`; // Highlight each sentence
+    }).join(' ');
+    document.getElementById("highlighted-info").innerHTML = highlightedInfo; // Show highlights
+}
+
+// Theme toggle functionality
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+    themeToggleButton.textContent = document.body.classList.contains("dark") ? "Switch to Light Mode" : "Switch to Dark Mode"; // Update button text
 }

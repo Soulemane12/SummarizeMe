@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lecture Summarizer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SummarizeMe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="navbar">
-        <button id="speech-nav" class="active">Speech to Summarize</button>
-        <button id="text-nav">Text to Summarize</button>
-    </div>
-    <div id="speech-section">
-        <h2>Speech to Summarize</h2>
-        <button id="start-recording">Start Recording</button>
-        <div id="transcript" class="hidden fade-in"></div> <!-- Add fade-in class -->
-        <button id="summarize" disabled>Summarize Speech</button>
-        <div id="speech-status-message" class="fade-in"></div> <!-- Add fade-in class -->
-        <div id="speech-summary" class="hidden fade-in"></div> <!-- Add fade-in class -->
-        <div id="speech-notes" class="hidden fade-in"></div> <!-- Add fade-in class -->
-    </div>
-    
-    
-    <div id="text-section" class="hidden">
-        <h2>Text to Summarize</h2>
-        <textarea id="text-input" placeholder="Type or paste text here..."></textarea>
-        <button id="submit-text">Submit Text</button>
-        <div id="text-status-message"></div>
-        <div id="text-summary" class="hidden"></div>
-        <div id="text-notes" class="hidden"></div> <!-- New section for text notes -->
-    </div>
-    
+<body class="light"> <!-- Default light theme -->
+    <header>
+        <h1>SummarizeMe</h1>
+    </header>
+
+    <nav>
+        <button id="speech-nav" class="active">Speech Mode</button>
+        <button id="text-nav">Text Mode</button>
+    </nav>
+
+    <main>
+        <!-- Speech Section -->
+        <div id="speech-section">
+            <button id="start-recording">Start Recording</button>
+            <div id="transcript" class="hidden"></div>
+            <button id="summarize" disabled>Summarize Speech</button>
+            <div id="speech-status-message"></div>
+            <div id="speech-summary" class="hidden"></div>
+            <div id="speech-notes" class="hidden"></div>
+        </div>
+
+        <!-- Text Section -->
+        <div id="text-section" class="hidden">
+            <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+            <button id="submit-text">Summarize Text</button>
+            <div id="text-status-message"></div>
+            <div id="text-summary" class="hidden"></div>
+            <div id="text-notes" class="hidden"></div>
+        </div>
+
+        <div id="highlight-container" class="hidden">
+            <h3>Highlighted Information:</h3>
+            <div id="highlighted-info"></div>
+        </div>
+    </main>
+
+    <footer>
+        <button id="theme-toggle">Switch to Dark Mode</button> <!-- Theme toggle button -->
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

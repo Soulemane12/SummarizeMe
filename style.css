@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    max-width: 1200px; /* Increase the width of the body */
+    margin-left: auto;
+    margin-right: auto; /* Center the body */
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px; /* Adjusted padding */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px; /* Smaller title size */
+    margin: 0; /* Remove margin */
+}
+
+nav {
+    text-align: center; /* Center navigation buttons */
+    margin-bottom: 20px; /* Space below nav */
+}
+
+nav button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Button padding */
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Button font size */
+}
+
+nav button.active {
+    background-color: #0056b3;
+}
+
+main {
+    margin: 30px 0; /* Space around main content */
+    text-align: center; /* Center main content */
+}
+
+textarea {
+    width: 100%;
+    height: 150px; /* Increased height */
+    margin-bottom: 15px; /* Space below textarea */
+    font-size: 16px; /* Increased font size */
+    padding: 10px; /* Padding inside textarea */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border styling */
+}
+
+.hidden {
+    display: none;
+}
+
+#highlight-container {
+    margin-top: 15px; /* Space above highlight container */
+}
+
+.highlight {
+    background-color: yellow; /* Highlight color */
+    font-weight: bold;
+}
+
+#speech-notes,
+#text-notes {
+    border: 1px solid #ccc;
+    padding: 15px; /* Padding inside notes */
+    min-height: 150px; /* Minimum height */
+    margin-top: 15px; /* Space above notes */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+}
+
+footer {
+    margin-top: 30px; /* Space above footer */
+    text-align: center; /* Center footer content */
+}
+
+footer button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Footer button padding */
+    cursor: pointer;
+    font-size: 14px; /* Footer button font size */
+    margin-bottom: 10px; /* Space below footer button */
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark header {
+    background-color: #444;
+}
+
+.dark nav button {
+    background-color: #555;
+}
+
+.dark nav button.active {
+    background-color: #666;
+}
+
+.dark footer button {
+    background-color: #555;
+}
